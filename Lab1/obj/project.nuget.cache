@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "I7lS8KFKJjLM31A6mLjMkeuZzlAdo7Wz3LsSRCJj1B5Gq5hlqEp7n/m2wll7fsOUJvgpCXvSUQJIMCGXcTDskA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lizas\\RiderProjects\\AIASLab1\\Lab1\\Lab1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lizas\\.nuget\\packages\\fluentassertions\\6.0.0-alpha0002\\fluentassertions.6.0.0-alpha0002.nupkg.sha512",
+    "C:\\Users\\lizas\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\lizas\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
