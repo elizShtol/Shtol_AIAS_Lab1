@@ -4772,7 +4772,8 @@
   },
   "packageFolders": {
     "C:\\Users\\lizas\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet": {}
+    "C:\\Microsoft\\Xamarin\\NuGet": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4784,7 +4785,8 @@
       "outputPath": "C:\\Users\\lizas\\RiderProjects\\AIASLab1\\Lab1Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet"
+        "C:\\Microsoft\\Xamarin\\NuGet",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\lizas\\AppData\\Roaming\\NuGet\\NuGet.Config",

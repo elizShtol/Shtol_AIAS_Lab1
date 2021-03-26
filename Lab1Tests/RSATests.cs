@@ -10,8 +10,10 @@ namespace Lab1Tests
         public static void Encode_Decode()
         {
             var rsa = new RSA(new BigInt(111119), new BigInt(1717151));
-            var encode = rsa.Encode(@"C:\Users\lizas\RiderProjects\AIASLab1\Lab1Tests\text.txt");
-            var decode = rsa.Decode(encode);
+            var openKeys = rsa.GetOpenKeys();
+            var encode = RSA.EncodeFromFile(@"C:\Users\lizas\RiderProjects\AIASLab1\Lab1Tests\text.txt", openKeys.Item1, openKeys.Item2);
+            var closedKeys = rsa.GetClosedKeys();
+            var decode = RSA.Decode(encode, closedKeys.Item1, closedKeys.Item2);
             using (var sr = new StreamReader(@"C:\Users\lizas\RiderProjects\AIASLab1\Lab1Tests\text.txt"))
             {
                 var text = sr.ReadToEnd();

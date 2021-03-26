@@ -8,6 +8,7 @@ namespace Lab1
     public class BigInt
     {
         public readonly sbyte Sign;
+
         public BigInt(int number)
         {
             var digits = new List<byte>();
@@ -252,8 +253,8 @@ namespace Lab1
             if (power == new BigInt(0))
                 return new BigInt(1);
             if (power % new BigInt(2) == new BigInt(1))
-                return Pow(n1, power-new BigInt(1)) * n1;
-            var b = Pow(n1, power/new BigInt(2));
+                return Pow(n1, power - new BigInt(1)) * n1;
+            var b = Pow(n1, power / new BigInt(2));
             return b * b;
         }
 
@@ -282,21 +283,19 @@ namespace Lab1
 
             return result;
         }
-        
-        public static BigInt ModPow(BigInt n1, BigInt power, BigInt mod) {
-           if (power == new BigInt(0)) return new BigInt(1); 
-           if (power % new BigInt(2) == new BigInt(1)) return (n1 * ModPow(n1, power-new BigInt(1), mod)) % mod; 
-           var n2 = ModPow(n1, power/new BigInt(2), mod);
-           return (n2 * n2) % mod;
+
+        public static BigInt ModPow(BigInt n1, BigInt power, BigInt mod)
+        {
+            if (power == new BigInt(0)) return new BigInt(1);
+            if (power % new BigInt(2) == new BigInt(1)) return n1 * ModPow(n1, power - new BigInt(1), mod) % mod;
+            var n2 = ModPow(n1, power / new BigInt(2), mod);
+            return n2 * n2 % mod;
         }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
-            foreach (var digit in Digits)
-            {
-                sb.Append(digit.ToString());
-            }
+            foreach (var digit in Digits) sb.Append(digit.ToString());
 
             if (Sign < 0)
                 sb.Insert(0, "-");
